@@ -14,7 +14,7 @@ def key_for_min_value(name_hash)
   
   counter = 0
   all_values.each do |value|
-    if value != nil && value < min_value
+    if value != nil && min_value != nil && value < min_value
       min_value = value
     end
     counter += 1
