@@ -8,9 +8,6 @@ def key_for_min_value(name_hash)
   end
   
   min_value = all_values[0]
-  if min_value = nil
-    return nil
-  end
   
   counter = 0
   all_values.each do |value|
@@ -19,5 +16,9 @@ def key_for_min_value(name_hash)
     end
     counter += 1
   end
-  name_hash[counter]
+  if all_values.size == nil || all_values.size == 0
+    return nil
+  else
+    return name_hash[counter]
+  end
 end
